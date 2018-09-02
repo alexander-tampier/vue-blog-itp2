@@ -1,10 +1,8 @@
 <template>
-<div class="my-container">
-  <div id="app">
-    <Navbar/>
-    <div class="container">
-      <router-view/>
-    </div>
+<div id="app">
+  <Navbar/>
+  <div class="container">
+    <router-view/>
   </div>
 </div>
 </template>

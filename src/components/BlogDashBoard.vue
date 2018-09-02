@@ -3,7 +3,7 @@
   <div class="row">
     <!-- s12 for mobile -->
     <div class="col s12 m4" v-for="post in posts" v-bind:key="post._id">
-      <div class="card">
+      <div class="card medium">
         <div class="card-image">
           <router-link :to="{ name: 'BlogPost', params: { id: post._id } }">
             <img :src="post.image_source">
@@ -13,8 +13,8 @@
           </router-link>
         </div>
         <div class="card-content">
-          <span class="card-title">{{post.title}}</span>
-          <p>{{post.content}}</p>
+          <span class="card-title">{{post.title | filterTitle(50)}}</span>
+          <p>{{post.content | truncate(100, '...')}}</p>
         </div>
       </div>
     </div>
@@ -47,4 +47,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.blog-dashboard{
+  margin-top: 3rem;
+}
 </style>

@@ -3,12 +3,12 @@
     <div class="row">
         <div class="col s12">
           <div class="card-panel myCard">
-            <div class="thumbnail"><img class="left" :src="cardSrc"/></div>
+            <div class="thumbnail"><img class="left" :src="image_source"/></div>
             <div class="my-right">
                 <h1 class="pageTitle">{{title}}</h1>
                 <h2 class="pageSubTitle">by Alexander Tampier</h2>
                 <div class="divider"></div>
-                <p>{{cardContent}}</p>
+                <p>{{content}}</p>
             </div>
           </div>
         </div>
@@ -17,14 +17,29 @@
 </template>
 
 <script>
+import PostService from '@/services/PostService';
+
 export default {
   name: 'BlogPost',
   data() {
     return {
-      title: 'Card Title',
-      cardContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat tortor a turpis mattis, in blandit orci venenatis. Quisque justo lacus, rutrum mattis tortor et, aliquam auctor risus. Mauris quis elit turpis. Morbi non nisl nunc. Duis elit quam, lobortis eget pretium sed, eleifend eu dui. Sed molestie ornare suscipit. Phasellus facilisis at quam sed tincidunt. Phasellus eget odio laoreet, dictum augue ac, dictum lorem. Nulla facilisi. Phasellus elit augue, cursus eu ante nec, vestibulum adipiscing mi. Nunc adipiscing nibh risus, sed auctor sapien sodales in. Morbi in purus diam. In id consequat velit, eget sodales enim. Nam a massa sed orci blandit interdum eget et ligula. Pellentesque laoreet semper vulputate.',
-      cardSrc: 'https://via.placeholder.com/640x426',
+      title: '',
+      content: '',
+      image_source: '',
     };
+  },
+  mounted() {
+    this.getPost();
+  },
+  methods: {
+    async getPost() {
+      const response = await PostService.getPost({
+        id: this.$route.params.id,
+      });
+      this.title = response.data.post.title;
+      this.content = response.data.post.content;
+      this.image_source = response.data.post.image_source;
+    },
   },
 };
 </script>
