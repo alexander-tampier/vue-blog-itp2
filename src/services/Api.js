@@ -5,6 +5,8 @@
  */
 import axios from 'axios';
 
+const BASE_URI = 'https://fast-mesa-23278.herokuapp.com/';
+
 export default () => axios.create({
-  baseURL: 'http://localhost:8081',
+  baseURL: BASE_URI,
 });

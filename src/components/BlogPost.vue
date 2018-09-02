@@ -17,15 +17,13 @@
 </template>
 
 <script>
-import imgOne from '../assets/card-picture-one.jpeg';
-
 export default {
   name: 'BlogPost',
   data() {
     return {
       title: 'Card Title',
       cardContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat tortor a turpis mattis, in blandit orci venenatis. Quisque justo lacus, rutrum mattis tortor et, aliquam auctor risus. Mauris quis elit turpis. Morbi non nisl nunc. Duis elit quam, lobortis eget pretium sed, eleifend eu dui. Sed molestie ornare suscipit. Phasellus facilisis at quam sed tincidunt. Phasellus eget odio laoreet, dictum augue ac, dictum lorem. Nulla facilisi. Phasellus elit augue, cursus eu ante nec, vestibulum adipiscing mi. Nunc adipiscing nibh risus, sed auctor sapien sodales in. Morbi in purus diam. In id consequat velit, eget sodales enim. Nam a massa sed orci blandit interdum eget et ligula. Pellentesque laoreet semper vulputate.',
-      cardSrc: imgOne,
+      cardSrc: 'https://via.placeholder.com/640x426',
     };
   },
 };

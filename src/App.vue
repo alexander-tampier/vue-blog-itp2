@@ -1,10 +1,12 @@
 <template>
+<div class="my-container">
   <div id="app">
     <Navbar/>
-    <div class="container my-container">
+    <div class="container">
       <router-view/>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -19,7 +21,7 @@ export default {
 </script>
 
 <style>
-#app{
+#app {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -34,6 +36,7 @@ export default {
   margin: 0 auto;
   overflow: hidden;
 }
+
 .my-container::after {
   content: "";
   position: absolute;
@@ -43,8 +46,8 @@ export default {
   bottom: 0;
   left: 0;
   -webkit-transform: rotate(65.5deg);
-          transform: rotate(65.5deg);
+  transform: rotate(65.5deg);
   -webkit-transform-origin: left bottom;
-          transform-origin: left bottom;
+  transform-origin: left bottom;
 }
 </style>
