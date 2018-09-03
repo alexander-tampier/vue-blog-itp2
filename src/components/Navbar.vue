@@ -3,7 +3,7 @@
   <nav class="white">
     <div class="nav-wrapper">
       <div class="container">
-        <router-link to="/">
+        <router-link :to="{ name: 'BlogDashBoard' }">
           <span class="brand-logo my-style">
             {{title}}
          </span>
