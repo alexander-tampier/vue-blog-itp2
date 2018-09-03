@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="blog-post">
     <div class="row">
-        <div class="col s12">
+        <div class="col s12 m12">
           <div class="card-panel myCard">
             <div class="thumbnail"><img class="left" :src="image_source"/></div>
             <div class="my-right">
@@ -36,9 +36,12 @@ export default {
       const response = await PostService.getPost({
         id: this.$route.params.id,
       });
-      this.title = response.data.post.title;
-      this.content = response.data.post.content;
-      this.image_source = response.data.post.image_source;
+
+      const post = response.data.post;
+
+      this.title = post.title;
+      this.content = post.content;
+      this.image_source = post.image_source;
     },
   },
 };
