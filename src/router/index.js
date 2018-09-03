@@ -9,12 +9,12 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/vue-blog-itp2',
       name: 'BlogDashBoard',
       component: BlogDashBoard,
     },
     {
-      path: '/post/:id',
+      path: '/vue-blog-itp2/post/:id',
       name: 'BlogPost',
       component: BlogPost,
     },
