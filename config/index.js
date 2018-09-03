@@ -6,10 +6,9 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/vue-blog-itp2',
+    assetsPublicPath: '/',
     proxyTable: {},
 
     // Various Dev Server settings
