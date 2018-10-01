@@ -9,7 +9,7 @@
     <div class="row">
        <div class="col s12">
           <img class="responsive-img my-img" :src="image_source">
-          <p class="flow-text">{{content}}</p>
+          <span class="flow-text" v-html="content"></span>
        </div>
     </div>
   </div>
@@ -61,8 +61,8 @@ h1 {
   font-family: Lobster;
 }
 
-p {
-  font-family: 'Oswald', sans-serif;
+.flow-text {
+  font-family: 'Oswald', sans-serif !important;
 }
 
 .my-img {

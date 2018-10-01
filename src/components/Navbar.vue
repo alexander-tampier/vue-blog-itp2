@@ -55,7 +55,11 @@ ul > li > a {
   top: 4.5px;
 }
 #logo:after {
-  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+  background-image: -webkit-linear-gradient(left top,
+    transparent 0%,
+    transparent 25%, #555 25%, #555 50%,
+    transparent 50%,
+    transparent 75%, #555 75%);
   background-size: 4px 4px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
