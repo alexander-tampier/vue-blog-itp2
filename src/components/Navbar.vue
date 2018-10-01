@@ -32,6 +32,7 @@ export default {
 
 ul > li > a {
   font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
   color: #555;
 }
 
