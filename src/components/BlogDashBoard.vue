@@ -13,8 +13,10 @@
           </router-link>
         </div>
         <div class="card-content">
-          <span class="card-title">{{post.title | filterTitle(50)}}</span>
+          <!--<span class="card-title">{{post.title | filterTitle(50)}}</span>-->
+          <span class="card-title truncate">{{post.title}}</span>
           <p>{{post.content | truncate(100, '...')}}</p>
+          <!--<p class="truncate">{{post.content}}</p>-->
         </div>
       </div>
     </div>
@@ -48,6 +50,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .blog-dashboard{
-  margin-top: 3rem;
+  padding-top: 1.5rem;
 }
 </style>

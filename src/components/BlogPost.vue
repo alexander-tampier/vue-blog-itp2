@@ -1,18 +1,17 @@
 <template lang="html">
   <div class="blog-post">
     <div class="row">
-        <div class="col s12 m12">
-          <div class="card-panel myCard">
-            <div class="thumbnail"><img class="left" :src="image_source"/></div>
-            <div class="my-right">
-                <h1 class="pageTitle">{{title}}</h1>
-                <h2 class="pageSubTitle">by Alexander Tampier</h2>
-                <div class="divider"></div>
-                <p>{{content}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+       <div class="col s12">
+          <h1>{{title}}</h1>
+       </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+       <div class="col s12">
+          <img class="responsive-img my-img" :src="image_source">
+          <p class="flow-text">{{content}}</p>
+       </div>
+    </div>
   </div>
 </template>
 
@@ -48,93 +47,27 @@ export default {
 </script>
 
 <style scoped>
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,300,200);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-.myCard{
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
-  line-height: 1.6em;
-  font-weight: 300;
-  margin-top: 5rem;
-  color: #555;
-  background-color: #FFF;
-  -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
 }
 
-.pageTitle,
-.pageSubTitle {
-  margin-top: 0 !important;
-  font-family: 'Titillium', sans-serif;
-  text-transform: uppercase;
-  color: #333;
-}
-
-.pageTitle {
-  margin-bottom: 0 !important;
-  padding-top: 15px;
-  color: #FF7600;
-}
-
-.pageTitle {
-  font-size: 2em;
-  font-weight: 700;
-  line-height: 2em;
-}
-
-.pageSubTitle {
-  margin-bottom: 1rem;
-  font-size: 1.4em;
-  font-weight: 300;
-}
-
-.my-separator {
-  margin-top: 10px;
-  border: 1px solid #C3C3C3;
+h1 {
+  font-family: Lobster;
 }
 
 p {
-  padding-top: 10px;
-  margin-bottom: 2em;
-  text-align: justify;
-  padding-top: 10px;
-  font-size: 0.95rem;
-  line-height: 150%;
-  color: #4B4B4B;
+  font-family: 'Oswald', sans-serif;
 }
 
-/* Right side of the card */
-.my-right {
-  margin-left: 390px;
-  margin-right: 20px;
-}
-
-/* Image on the left side */
-.thumbnail {
-  float: left;
-  position: relative;
-  left: 30px;
-  top: -60px;
-  height: 220px;
-  width: 330px;
-  -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  overflow: hidden;
-}
-
-img.left {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: auto;
+.my-img {
   width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  height: auto;
+  padding-top: 10px;
 }
-
 </style>
